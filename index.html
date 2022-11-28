@@ -1,0 +1,80 @@
+<html lang="en">
+    <head>
+        <!--metadata-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CRUD</title>
+
+        <!--links-->
+        <link rel="stylesheet" href="./CSS/all.min.css">
+        <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+        
+    </head>
+
+    <body class="bg-light">
+        
+        <div class="container my-5 pt-4 px-md-3  bg-white border rounded    ">
+            <h1 class=" text-danger py-2">CRUD</h1>
+            <div class="row">
+                <!--inputs-->
+                <div class="fields col-md-4 align-content-center">
+                    <input class="  form-control" id="name" type="text" placeholder="Full Name">
+                    <input class="form-control " id="age" type="text" placeholder="Age">
+                    <p id="notvalid" style="display: none;" class="invalid-feedback">invalid age</p>
+                    <input class="form-control" id="job" type="text" placeholder="Job Title">
+                    <input class="form-control  " id="email" type="email" placeholder="Email">
+                    <p class="invalid-feedback" id="invalidmail" style="display: none;" >You have entered an invalid email address!</p>
+                    <button id="add" class="btn btn-danger" ><i class="fa fa-plus"></i>Add New</button>
+                    <button id="edit" class="btn btn-primary " onclick="edit()" >Edit</button>
+                    <button id="clear" class="btn btn-danger" >Clear form</button>
+                    
+                </div>
+        
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4>Data List</h4>
+                        </div>
+                        <div class="col-9 mb-3 ">
+                            <div class="d-flex justify-content-end a     ">
+                            <input  id="search" class="form-control w-50" type="text" placeholder="Search">
+                            <button id="reload" class="btn btn-danger" title="Reload" ><i class="text-white fa fa-sync-alt"></i></button>
+                            <button id="excel" class="btn btn-danger" title="Excel"><i class="fas fa-file-excel"></i></button>
+
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="w">
+                        <table id="table" class="table table-responsive  table-hover table-dark table-striped  " >
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Full Name</th>
+                                    <th>Age</th>
+                                    <th>Job Title</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tb">
+                           
+                            </tbody>
+                        </table>
+        
+                    </div>
+        
+                   
+        
+                </div>
+    
+            </div>
+        </div>
+<script src="./JS/jquery-3.6.1.min.js"></script>
+<script src="./JS/main.js"></script>
+
+    </body>
+
+</html>
